@@ -1,4 +1,4 @@
-# Seating-Layout-Sample
+# Booking-Seats-Layout-Sample
 
 This project is sample app for Android it generates a dynamic layout for booking seats.
 
