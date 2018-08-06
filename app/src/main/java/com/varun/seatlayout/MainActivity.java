@@ -17,22 +17,22 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     ViewGroup layout;
 
-    String seats =    "_UUUUUUAAAAARRRR_/"
-                    + "_________________/"
-                    + "UU__AAAARRRRR__RR/"
-                    + "UU__UUUAAAAAA__AA/"
-                    + "AA__AAAAAAAAA__AA/"
-                    + "AA__AARUUUURR__AA/"
-                    + "UU__UUUA_RRRR__AA/"
-                    + "AA__AAAA_RRAA__UU/"
-                    + "AA__AARR_UUUU__RR/"
-                    + "AA__UUAA_UURR__RR/"
-                    + "_________________/"
-                    + "UU_AAAAAAAUUUU_RR/"
-                    + "RR_AAAAAAAAAAA_AA/"
-                    + "AA_UUAAAAAUUUU_AA/"
-                    + "AA_AAAAAAUUUUU_AA/"
-                    + "_________________/";
+    String seats = "_UUUUUUAAAAARRRR_/"
+            + "_________________/"
+            + "UU__AAAARRRRR__RR/"
+            + "UU__UUUAAAAAA__AA/"
+            + "AA__AAAAAAAAA__AA/"
+            + "AA__AARUUUURR__AA/"
+            + "UU__UUUA_RRRR__AA/"
+            + "AA__AAAA_RRAA__UU/"
+            + "AA__AARR_UUUU__RR/"
+            + "AA__UUAA_UURR__RR/"
+            + "_________________/"
+            + "UU_AAAAAAAUUUU_RR/"
+            + "RR_AAAAAAAAAAA_AA/"
+            + "AA_UUAAAAAUUUU_AA/"
+            + "AA_AAAAAAUUUUU_AA/"
+            + "_________________/";
 
     List<TextView> seatViewList = new ArrayList<>();
     int seatSize = 100;
@@ -135,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if ((int) view.getTag() == STATUS_AVAILABLE) {
             if (selectedIds.contains(view.getId() + ",")) {
+                selectedIds = selectedIds.replace(+view.getId() + ",", "");
                 view.setBackgroundResource(R.drawable.ic_seats_book);
             } else {
                 selectedIds = selectedIds + view.getId() + ",";
