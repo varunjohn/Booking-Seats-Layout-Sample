@@ -26,10 +26,11 @@ String seats =        "_UUUUUUAAAAARRRR_/"
                     + "_________________/";
 ```
 As for this sample we have 3 status for the seats :<br />
-* _ is for empty space<br />
 * U is for already booked seats<br />
 * R is for reserved seats<br />
 * A is for available seats<br />
+
+* _ is for empty space<br />
 
 You can customize this string according to your seats arrangement. As of this string it has 175 seats each having unique id assigned to it. The assigned id is useful for sending the booked seats request to server. 
 
